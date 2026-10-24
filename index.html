@@ -309,7 +309,7 @@ home(){const C=PIC('chev'),G=(t,s,img,m)=>`<div class="li" data-a="toast" data-v
 return `<div class="s" style="background:var(--hb)">${HEAD()}<div class="sc">
 <div class="card c1">
 ${S.acc.slice(0,S.n).map((a,i)=>`<div class="row" data-a="acct" data-v="${i}">${AIC(a.ic)}<div class="rt"><b>${W(a.bal)}원</b><i>${esc(a.nm)}</i></div>${btnFor(a,i)}</div>`).join('')}
-<div class="row">${PIC('r4','margin-right:12px')}<div class="rt"><b>${W(S.pts)}번</b><i>송금·결제 후 받는 포인트</i></div><div class="sm" data-a="pts">받기</div></div>
+${S.pts>0?`<div class="row">${PIC('r4','margin-right:12px')}<div class="rt"><b>${W(S.pts)}번</b><i>송금·결제 후 받는 포인트</i></div><div class="sm" data-a="pts">받기</div></div>`:''}
 <div class="more" data-a="open" data-v="assets">자산 모두 보기</div></div>
 <div class="card c2"><div class="a" style="left:20px;top:14px"><b class="big">${W(S.spent)}원</b><div class="gy sub">${MON()}월에 쓴 돈</div></div><div class="sm a" data-a="open" data-v="hist" style="right:20px;top:17px">내역</div><div class="a" data-a="toast" data-v="토스유스카드 충전은 준비 중이에요" style="left:0;right:0;top:60px;bottom:0;padding:8px 20px;cursor:pointer"><b class="big">잔액보고 충전하기</b><div class="gy sub">토스유스카드</div></div></div>
 <div class="card c3">${G('최근 본 상품','포켓몬 카드 TCG 메가 확장팩, 30th C...',PIC('p0'),'최근 본 상품은 쇼핑 탭에서 볼 수 있어요')}${G('방문한 서비스','스택 타워: 무한 탑쌓기',PIC('p1'),'스택 타워는 준비 중이에요')}${G('오늘의 딜','롯데리아 최대 1.3만원 할인',PIC('p2'),'오늘의 딜은 준비 중이에요')}</div>
